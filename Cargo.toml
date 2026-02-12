@@ -1,0 +1,10 @@
+[package]
+name = "gpui-anim"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dashmap = "6.1.0"
+gpui = { git = "https://github.com/zed-industries/zed" }
+parking_lot = "0.12.5"
+smol = "2.0.2"
