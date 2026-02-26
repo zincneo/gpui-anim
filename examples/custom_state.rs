@@ -1,11 +1,12 @@
 use std::time::Duration;
 
 use gpui::{
-    App, Application, Bounds, Context, InteractiveElement, Render, Window, WindowBounds,
-    WindowOptions, div, prelude::*, px, rgb, size,
+    App, Bounds, Context, InteractiveElement, Render, Window, WindowBounds, WindowOptions, div,
+    prelude::*, px, rgb, size,
 };
 use gpui_anim::api::wrapper::TransitionExt;
 use gpui_anim::transition::curves::Linear;
+use gpui_platform::application;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 enum AppState {
@@ -140,7 +141,7 @@ impl CustomStateExample {
 }
 
 fn main() {
-    Application::new().run(|cx: &mut App| {
+    application().run(|cx: &mut App| {
         let bounds = Bounds::centered(None, size(px(700.0), px(600.0)), cx);
         cx.open_window(
             WindowOptions {

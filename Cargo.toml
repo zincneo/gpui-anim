@@ -5,6 +5,7 @@ edition = "2024"
 
 [dependencies]
 dashmap = "6.1.0"
-gpui = { git = "https://github.com/zed-industries/zed", rev = "d08d98f6c1c1aefb342de072d9beac25eaf6130f" }
+gpui = { git = "https://github.com/zed-industries/zed", rev = "938b8ab7"}
+gpui_platform = { git = "https://github.com/zed-industries/zed", package = "gpui_platform", features = ["font-kit", "x11", "wayland", "runtime_shaders"], rev = "938b8ab7" }
 parking_lot = "0.12.5"
 smol = "2.0.2"

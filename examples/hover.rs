@@ -1,11 +1,12 @@
 use std::time::Duration;
 
 use gpui::{
-    App, Application, Bounds, Context, Render, Window, WindowBounds, WindowOptions, div,
-    prelude::*, px, rgb, size,
+    App, Bounds, Context, Render, Window, WindowBounds, WindowOptions, div, prelude::*, px, rgb,
+    size,
 };
 use gpui_anim::api::wrapper::TransitionExt;
 use gpui_anim::transition::curves::Linear;
+use gpui_platform::application;
 
 struct HoverExample;
 
@@ -34,7 +35,7 @@ impl Render for HoverExample {
 }
 
 fn main() {
-    Application::new().run(|cx: &mut App| {
+    application().run(|cx: &mut App| {
         let bounds = Bounds::centered(None, size(px(500.0), px(500.0)), cx);
         cx.open_window(
             WindowOptions {
